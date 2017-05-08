@@ -19,7 +19,7 @@ public class OptionsController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		musicManager.SetVolume (volumeSlider.value);
 	}
 
 	public void SaveAndExit(){
