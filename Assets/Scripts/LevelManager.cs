@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel(string name){
 		SceneManager.LoadScene (name);
+		Debug.Log (PlayerPrefsManager.GetDifficulty());
 	}
 
 	public void LoadNextLevel(){
