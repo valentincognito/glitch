@@ -12,8 +12,5 @@ public class Shooter : MonoBehaviour {
 		newProjectile.transform.position = gun.transform.position;
 
 	}
-
-	void OnBecameInvisible(){
-		Destroy (gameObject);
-	}
+		
 }

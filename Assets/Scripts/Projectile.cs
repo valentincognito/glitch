@@ -16,4 +16,20 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 		transform.Translate (Vector3.right * speed * Time.deltaTime);
 	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+		GameObject obj = collider.gameObject;
+
+		if(!obj.GetComponent<Attacker>()){
+			return;
+		}
+
+		// here I could handle an hit animation
+
+		Health health = collider.GetComponent<Health> ();
+		if(health)health.DealDamage (damage);
+
+		Destroy (gameObject);
+
+	}
 }

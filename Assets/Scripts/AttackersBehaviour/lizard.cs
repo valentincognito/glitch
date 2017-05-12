@@ -21,8 +21,6 @@ public class lizard : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
-		Debug.Log ("Lizard collided with " + collider);
-
 		GameObject obj = collider.gameObject;
 
 		if(!obj.GetComponent<Defender>()){

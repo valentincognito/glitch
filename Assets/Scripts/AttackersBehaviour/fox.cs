@@ -21,8 +21,6 @@ public class fox : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
-		Debug.Log ("Fox collided with " + collider);
-
 		GameObject obj = collider.gameObject;
 
 		if(!obj.GetComponent<Defender>()){
