@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	public float health = 100f;
+
+	public void DealDamage(float damage){
+		health -= damage;
+
+		if(health <= 0){
+			// optionally add die animation
+			DestroyObject();
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void DestroyObject(){
+		Destroy (gameObject);
 	}
 }
