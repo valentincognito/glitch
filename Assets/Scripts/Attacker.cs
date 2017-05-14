@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Attacker : MonoBehaviour {
+	
+	public float seenEverySeconds;
 
-
-	[Range(-1f, 1.5f)] private float currentSpeed;
+	private float currentSpeed;
 	private GameObject currentTarget;
 	private Animator animator;
 
@@ -24,6 +25,7 @@ public class Attacker : MonoBehaviour {
 		if(!currentTarget){
 			animator.SetBool ("isAttacking", false);
 		}
+
 	}
 		
 
@@ -41,7 +43,7 @@ public class Attacker : MonoBehaviour {
 
 	public void Attack(GameObject obj){
 		currentTarget = obj;
-
 	}
+
 
 }
