@@ -31,14 +31,14 @@ public class GameTimer : MonoBehaviour {
 		if(Time.timeSinceLevelLoad >= levelSeconds && !isEndOfLevel){
 			audioSource.Play ();
 			winLabel.SetActive (true);
-			Invoke("LoadVictoryScreen", audioSource.clip.length);
+			Invoke("LoadNextLevel", audioSource.clip.length);
 			isEndOfLevel = true;
 		}
 
 	}
 		
 
-	private void LoadVictoryScreen(){
-		levelManager.LoadLevel ("03a_Win_Screen");
+	private void LoadNextLevel(){
+		levelManager.LoadNextLevel();
 	}
 }
